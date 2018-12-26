@@ -1,0 +1,12 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+SampleAPITesting,,,2018-12-26 11:43:00,2018-12-26 11:43:09,8.753s,PASSED
+,,,,,,
+Test Cases/CalculatorTests/Addition,,,2018-12-26 11:43:01,2018-12-26 11:43:07,5.952s,PASSED
+"response = sendRequestAndVerify(findTestObject(""CalculatorSoapServices/Addition""))",,,2018-12-26 11:43:01,2018-12-26 11:43:06,4.763s,PASSED
+"verifyResponseStatusCode(response, 200)",,,2018-12-26 11:43:06,2018-12-26 11:43:06,0.021s,PASSED
+"verifyElementPropertyValue(response, ""AddResponse.AddResult"", ""9"")",,,2018-12-26 11:43:06,2018-12-26 11:43:07,0.494s,PASSED
+,,,,,,
+Test Cases/UserRestTest/UserData,,,2018-12-26 11:43:07,2018-12-26 11:43:09,2.373s,PASSED
+"response = sendRequestAndVerify(findTestObject(""UserRestService/ListUsers""))",,,2018-12-26 11:43:07,2018-12-26 11:43:09,1.832s,PASSED
+"verifyResponseStatusCode(response, 200)",,,2018-12-26 11:43:09,2018-12-26 11:43:09,0.008s,PASSED
+"verifyElementPropertyValue(response, ""data[2].first_name"", ""Tracey"")",,,2018-12-26 11:43:09,2018-12-26 11:43:09,0.061s,PASSED

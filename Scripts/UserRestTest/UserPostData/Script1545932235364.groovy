@@ -13,16 +13,13 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-restresponse = WS.sendRequestAndVerify(findTestObject('UserRestService/ListUsers'))
+postresponse = WS.sendRequest(findTestObject('UserRestService/PostUserData'))
 
-WS.verifyResponseStatusCode(restresponse, 200)
-
-WS.verifyElementPropertyValue(restresponse, 'data[2].first_name', 'Tracey')
+WS.verifyElementPropertyValue(postresponse, 'name', "Tracey")
 
 def slurper = new groovy.json.JsonSlurper()
-def result = slurper.parseText(restresponse.getResponseBodyContent())
+def result = slurper.parseText(postresponse.getResponseBodyContent())
 
-GlobalVariable.UserName = result.data[2].first_name
+GlobalVariable.a = result.id
 
-println(GlobalVariable.UserName)
-
+println(GlobalVariable.a)

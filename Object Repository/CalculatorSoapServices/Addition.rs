@@ -15,7 +15,7 @@
    <soapBody>&lt;Envelope xmlns=&quot;http://schemas.xmlsoap.org/soap/envelope/&quot;>
     &lt;Body>
         &lt;Add xmlns=&quot;http://tempuri.org/&quot;>
-            &lt;intA>2&lt;/intA>
+            &lt;intA>${IntA}&lt;/intA>
             &lt;intB>7&lt;/intB>
         &lt;/Add>
     &lt;/Body>
@@ -23,6 +23,13 @@
    <soapHeader></soapHeader>
    <soapRequestMethod>SOAP</soapRequestMethod>
    <soapServiceFunction>Add</soapServiceFunction>
+   <variables>
+      <defaultValue>GlobalVariable.a</defaultValue>
+      <description></description>
+      <id>ea7878bb-a7ab-436a-8b3f-31fc9f3ea386</id>
+      <masked>false</masked>
+      <name>IntA</name>
+   </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 
 import com.kms.katalon.core.testobject.RequestObject

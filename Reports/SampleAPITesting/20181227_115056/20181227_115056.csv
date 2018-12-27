@@ -1,0 +1,24 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+SampleAPITesting,,,2018-12-27 11:50:59,2018-12-27 11:51:09,10.184s,FAILED
+,,,,,,
+Test Cases/UserRestTest/UserData,,,2018-12-27 11:50:59,2018-12-27 11:51:05,5.295s,PASSED
+"restresponse = sendRequestAndVerify(findTestObject(""UserRestService/ListUsers""))",,,2018-12-27 11:51:00,2018-12-27 11:51:04,4.509s,PASSED
+"verifyResponseStatusCode(restresponse, 200)",,,2018-12-27 11:51:04,2018-12-27 11:51:05,0.047s,PASSED
+"verifyElementPropertyValue(restresponse, ""data[2].first_name"", ""Tracey"")",,,2018-12-27 11:51:05,2018-12-27 11:51:05,0.089s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,2018-12-27 11:51:05,2018-12-27 11:51:05,0.000s,PASSED
+result = slurper.parseText(restresponse.getResponseBodyContent()),,,2018-12-27 11:51:05,2018-12-27 11:51:05,0.018s,PASSED
+UserName = first_name,,,2018-12-27 11:51:05,2018-12-27 11:51:05,0.016s,PASSED
+println(UserName),,,2018-12-27 11:51:05,2018-12-27 11:51:05,0.015s,PASSED
+,,,,,,
+Test Cases/UserRestTest/UserPostData,,,2018-12-27 11:51:05,2018-12-27 11:51:06,1.410s,PASSED
+"postresponse = sendRequest(findTestObject(""UserRestService/PostUserData""))",,,2018-12-27 11:51:05,2018-12-27 11:51:06,1.118s,PASSED
+"verifyElementPropertyValue(postresponse, ""name"", ""Tracey"")",,,2018-12-27 11:51:06,2018-12-27 11:51:06,0.032s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,2018-12-27 11:51:06,2018-12-27 11:51:06,0.000s,PASSED
+result = slurper.parseText(postresponse.getResponseBodyContent()),,,2018-12-27 11:51:06,2018-12-27 11:51:06,0.000s,PASSED
+a = id,,,2018-12-27 11:51:06,2018-12-27 11:51:06,0.000s,PASSED
+println(a),,,2018-12-27 11:51:06,2018-12-27 11:51:06,0.000s,PASSED
+,,,,,,
+Test Cases/CalculatorTests/Addition,,,2018-12-27 11:51:06,2018-12-27 11:51:09,2.874s,FAILED
+"soapresponse = sendRequestAndVerify(findTestObject(""CalculatorSoapServices/Addition""))",,,2018-12-27 11:51:06,2018-12-27 11:51:08,2.164s,PASSED
+"verifyResponseStatusCode(soapresponse, 200)",,,2018-12-27 11:51:08,2018-12-27 11:51:08,0.009s,PASSED
+"verifyElementPropertyValue(soapresponse, ""AddResponse.AddResult"", ""9"")",,,2018-12-27 11:51:08,2018-12-27 11:51:09,0.544s,FAILED

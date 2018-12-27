@@ -1,0 +1,23 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+SampleAPITesting,,,2018-12-27 11:52:15,2018-12-27 11:52:24,8.883s,PASSED
+,,,,,,
+Test Cases/UserRestTest/UserData,,,2018-12-27 11:52:16,2018-12-27 11:52:20,4.859s,PASSED
+"restresponse = sendRequestAndVerify(findTestObject(""UserRestService/ListUsers""))",,,2018-12-27 11:52:16,2018-12-27 11:52:20,4.080s,PASSED
+"verifyResponseStatusCode(restresponse, 200)",,,2018-12-27 11:52:20,2018-12-27 11:52:20,0.060s,PASSED
+"verifyElementPropertyValue(restresponse, ""data[2].first_name"", ""Tracey"")",,,2018-12-27 11:52:20,2018-12-27 11:52:20,0.141s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,2018-12-27 11:52:20,2018-12-27 11:52:20,0.000s,PASSED
+result = slurper.parseText(restresponse.getResponseBodyContent()),,,2018-12-27 11:52:20,2018-12-27 11:52:20,0.011s,PASSED
+UserName = first_name,,,2018-12-27 11:52:20,2018-12-27 11:52:20,0.025s,PASSED
+println(UserName),,,2018-12-27 11:52:20,2018-12-27 11:52:20,0.016s,PASSED
+,,,,,,
+Test Cases/UserRestTest/UserPostData,,,2018-12-27 11:52:20,2018-12-27 11:52:22,1.523s,PASSED
+"postresponse = sendRequest(findTestObject(""UserRestService/PostUserData""))",,,2018-12-27 11:52:21,2018-12-27 11:52:22,1.128s,PASSED
+"verifyElementPropertyValue(postresponse, ""name"", ""Tracey"")",,,2018-12-27 11:52:22,2018-12-27 11:52:22,0.015s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,2018-12-27 11:52:22,2018-12-27 11:52:22,0.000s,PASSED
+result = slurper.parseText(postresponse.getResponseBodyContent()),,,2018-12-27 11:52:22,2018-12-27 11:52:22,0.000s,PASSED
+a = id,,,2018-12-27 11:52:22,2018-12-27 11:52:22,0.000s,PASSED
+println(a),,,2018-12-27 11:52:22,2018-12-27 11:52:22,0.016s,PASSED
+,,,,,,
+Test Cases/CalculatorTests/Addition,,,2018-12-27 11:52:22,2018-12-27 11:52:24,2.071s,PASSED
+"soapresponse = sendRequestAndVerify(findTestObject(""CalculatorSoapServices/Addition""))",,,2018-12-27 11:52:22,2018-12-27 11:52:24,1.897s,PASSED
+"verifyResponseStatusCode(soapresponse, 200)",,,2018-12-27 11:52:24,2018-12-27 11:52:24,0.000s,PASSED

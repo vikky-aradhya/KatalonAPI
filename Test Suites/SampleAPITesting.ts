@@ -4,7 +4,7 @@
    <name>SampleAPITesting</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-12-27T11:52:13</lastRun>
+   <lastRun>2018-12-31T12:14:24</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -28,5 +28,11 @@
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
       <testCaseId>Test Cases/CalculatorTests/Addition</testCaseId>
+   </testCaseLink>
+   <testCaseLink>
+      <guid>bf33eebe-5d6c-4b06-aed8-7552bcf3b5a0</guid>
+      <isReuseDriver>false</isReuseDriver>
+      <isRun>true</isRun>
+      <testCaseId>Test Cases/CountrySOAPService/CountryServices</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

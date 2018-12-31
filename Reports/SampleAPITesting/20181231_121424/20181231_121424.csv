@@ -1,0 +1,35 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+SampleAPITesting,,,2018-12-31 12:14:26,2018-12-31 12:14:43,17.331s,PASSED
+,,,,,,
+Test Cases/UserRestTest/UserData,,,2018-12-31 12:14:26,2018-12-31 12:14:31,5.010s,PASSED
+"restresponse = sendRequestAndVerify(findTestObject(""UserRestService/ListUsers""))",,,2018-12-31 12:14:27,2018-12-31 12:14:31,4.321s,PASSED
+"verifyResponseStatusCode(restresponse, 200)",,,2018-12-31 12:14:31,2018-12-31 12:14:31,0.041s,PASSED
+"verifyElementPropertyValue(restresponse, ""data[2].first_name"", ""Tracey"")",,,2018-12-31 12:14:31,2018-12-31 12:14:31,0.111s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,2018-12-31 12:14:31,2018-12-31 12:14:31,0.004s,PASSED
+result = slurper.parseText(restresponse.getResponseBodyContent()),,,2018-12-31 12:14:31,2018-12-31 12:14:31,0.019s,PASSED
+UserName = first_name,,,2018-12-31 12:14:31,2018-12-31 12:14:31,0.020s,PASSED
+"println(""Username is:"" + UserName)",,,2018-12-31 12:14:31,2018-12-31 12:14:31,0.004s,PASSED
+,,,,,,
+Test Cases/UserRestTest/UserPostData,,,2018-12-31 12:14:31,2018-12-31 12:14:33,1.932s,PASSED
+"postresponse = sendRequest(findTestObject(""UserRestService/PostUserData""))",,,2018-12-31 12:14:32,2018-12-31 12:14:33,1.539s,PASSED
+"verifyElementPropertyValue(postresponse, ""name"", ""Tracey"")",,,2018-12-31 12:14:33,2018-12-31 12:14:33,0.028s,PASSED
+slurper = new groovy.json.JsonSlurper(),,,2018-12-31 12:14:33,2018-12-31 12:14:33,0.000s,PASSED
+result = slurper.parseText(postresponse.getResponseBodyContent()),,,2018-12-31 12:14:33,2018-12-31 12:14:33,0.000s,PASSED
+a = id,,,2018-12-31 12:14:33,2018-12-31 12:14:33,0.000s,PASSED
+"println(""Random id value is:"" + a)",,,2018-12-31 12:14:33,2018-12-31 12:14:33,0.000s,PASSED
+,,,,,,
+Test Cases/CalculatorTests/Addition,,,2018-12-31 12:14:33,2018-12-31 12:14:36,2.775s,PASSED
+"soapresponse = sendRequestAndVerify(findTestObject(""CalculatorSoapServices/Addition""))",,,2018-12-31 12:14:33,2018-12-31 12:14:36,2.597s,PASSED
+"verifyResponseStatusCode(soapresponse, 200)",,,2018-12-31 12:14:36,2018-12-31 12:14:36,0.002s,PASSED
+,,,,,,
+Test Cases/CountrySOAPService/CountryServices,,,2018-12-31 12:14:36,2018-12-31 12:14:43,7.118s,PASSED
+"CountryList = sendRequest(findTestObject(""CountrySoapServices/CountryListByNames""))",,,2018-12-31 12:14:37,2018-12-31 12:14:41,4.187s,PASSED
+"verifyElementText(CountryList, ""ListOfCountryNamesByNameResponse.ListOfCountryNamesByNameResult.tCountryCodeAndName[98].sISOCode"", ""IN"")",,,2018-12-31 12:14:41,2018-12-31 12:14:41,0.400s,PASSED
+xml1 = responseBodyContent,,,2018-12-31 12:14:41,2018-12-31 12:14:41,0.100s,PASSED
+datavalue = XmlSlurper().parseText(xml1),,,2018-12-31 12:14:41,2018-12-31 12:14:41,0.012s,PASSED
+countryCode = sISOCode.text(),,,2018-12-31 12:14:41,2018-12-31 12:14:41,0.010s,PASSED
+CountryISOCode = countryCode,,,2018-12-31 12:14:41,2018-12-31 12:14:41,0.000s,PASSED
+"println(""Country ISO code is: "" + CountryISOCode)",,,2018-12-31 12:14:41,2018-12-31 12:14:41,0.004s,PASSED
+"CountryCurrency = sendRequest(findTestObject(""CountrySoapServices/CountryCurrency""))",,,2018-12-31 12:14:41,2018-12-31 12:14:43,1.721s,PASSED
+"verifyElementText(CountryCurrency, ""CountryCurrencyResponse.CountryCurrencyResult.sISOCode"", ""INR"")",,,2018-12-31 12:14:43,2018-12-31 12:14:43,0.024s,PASSED
+"verifyElementText(CountryCurrency, ""CountryCurrencyResponse.CountryCurrencyResult.sName"", ""Rupees"")",,,2018-12-31 12:14:43,2018-12-31 12:14:43,0.043s,PASSED

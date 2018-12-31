@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="SampleAPITesting" time="9" tests="3" failures="0" errors="0">
+   <testsuite name="SampleAPITesting" tests="3" failures="0" errors="0" time="9" timestamp="2018-12-31 11:46:16" hostname="vikky - Vikkyaradhya" id="Test Suites/SampleAPITesting">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\vikky\\Katalon Studio\\API Demo Project\\Reports\\SampleAPITesting\\20181231_114613"/>
+         <property name="logFiles" value="C:\\Users\\vikky\\Katalon Studio\\API Demo Project\\Reports\\SampleAPITesting\\20181231_114613\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="vikky - Vikkyaradhya"/>
+         <property name="hostAddress" value="192.168.1.5"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="5.9.1.2"/>
+      </properties>
+      <testcase name="Test Cases/UserRestTest/UserData" classname="Test Cases/UserRestTest/UserData" status="PASSED">
+         <system-out><![CDATA[2018-12-31 11:46:16 - [TEST_CASE][PASSED] - Test Cases/UserRestTest/UserData: Test Cases/UserRestTest/UserData
+
+2018-12-31 11:46:17 - [TEST_STEP][PASSED] - restresponse = sendRequestAndVerify(findTestObject("UserRestService/ListUsers")): Send request and verify the response successfully
+
+2018-12-31 11:46:20 - [TEST_CASE][PASSED] - Start Test Case : Verification: Verification accomplished successfully
+
+2018-12-31 11:46:21 - [TEST_STEP][PASSED] - request = getInstance().getCurrentRequest(): null
+
+2018-12-31 11:46:21 - [TEST_STEP][PASSED] - response = getInstance().getCurrentResponse(): null
+
+2018-12-31 11:46:21 - [MESSAGE][PASSED] - Verify response successfully
+
+2018-12-31 11:46:21 - [MESSAGE][PASSED] - Send request and verify the response successfully
+
+2018-12-31 11:46:21 - [TEST_STEP][PASSED] - verifyResponseStatusCode(restresponse, 200): Verify response status code successfully
+
+2018-12-31 11:46:21 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2018-12-31 11:46:21 - [TEST_STEP][PASSED] - verifyElementPropertyValue(restresponse, "data[2].first_name", "Tracey"): Verify element property value successfully
+
+2018-12-31 11:46:21 - [MESSAGE][PASSED] - Verify element property value successfully
+
+2018-12-31 11:46:21 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2018-12-31 11:46:21 - [TEST_STEP][PASSED] - result = slurper.parseText(restresponse.getResponseBodyContent()): null
+
+2018-12-31 11:46:21 - [TEST_STEP][PASSED] - UserName = first_name: null
+
+2018-12-31 11:46:21 - [TEST_STEP][PASSED] - println(UserName): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/UserRestTest/UserPostData" classname="Test Cases/UserRestTest/UserPostData" status="PASSED">
+         <system-out><![CDATA[2018-12-31 11:46:21 - [TEST_CASE][PASSED] - Test Cases/UserRestTest/UserPostData: Test Cases/UserRestTest/UserPostData
+
+2018-12-31 11:46:21 - [TEST_STEP][PASSED] - postresponse = sendRequest(findTestObject("UserRestService/PostUserData")): Send request successfully
+
+2018-12-31 11:46:23 - [MESSAGE][INFO] - HAR: C:\Users\vikky\Katalon Studio\API Demo Project\Reports\SampleAPITesting\20181231_114613\requests\main\0.har
+
+2018-12-31 11:46:23 - [MESSAGE][PASSED] - Send request successfully
+
+2018-12-31 11:46:23 - [TEST_STEP][PASSED] - verifyElementPropertyValue(postresponse, "name", "Tracey"): Verify element property value successfully
+
+2018-12-31 11:46:23 - [MESSAGE][PASSED] - Verify element property value successfully
+
+2018-12-31 11:46:23 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2018-12-31 11:46:23 - [TEST_STEP][PASSED] - result = slurper.parseText(postresponse.getResponseBodyContent()): null
+
+2018-12-31 11:46:23 - [TEST_STEP][PASSED] - a = id: null
+
+2018-12-31 11:46:23 - [TEST_STEP][PASSED] - println(a): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/CalculatorTests/Addition" classname="Test Cases/CalculatorTests/Addition" status="PASSED">
+         <system-out><![CDATA[2018-12-31 11:46:23 - [TEST_CASE][PASSED] - Test Cases/CalculatorTests/Addition: Test Cases/CalculatorTests/Addition
+
+2018-12-31 11:46:23 - [TEST_STEP][PASSED] - soapresponse = sendRequestAndVerify(findTestObject("CalculatorSoapServices/Addition")): Send request and verify the response successfully
+
+2018-12-31 11:46:25 - [TEST_CASE][PASSED] - Start Test Case : Verification: Verification accomplished successfully
+
+2018-12-31 11:46:25 - [TEST_STEP][PASSED] - request = getInstance().getCurrentRequest(): null
+
+2018-12-31 11:46:25 - [TEST_STEP][PASSED] - response = getInstance().getCurrentResponse(): null
+
+2018-12-31 11:46:25 - [TEST_STEP][PASSED] - getResponseText()).contains("AddResult"): null
+
+2018-12-31 11:46:25 - [MESSAGE][PASSED] - Verify response successfully
+
+2018-12-31 11:46:25 - [MESSAGE][PASSED] - Send request and verify the response successfully
+
+2018-12-31 11:46:25 - [TEST_STEP][PASSED] - verifyResponseStatusCode(soapresponse, 200): Verify response status code successfully
+
+2018-12-31 11:46:25 - [MESSAGE][PASSED] - Verify response status code successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2018-12-31 11:46:16 - [TEST_SUITE][PASSED] - SampleAPITesting: Test Cases/CalculatorTests/Addition]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

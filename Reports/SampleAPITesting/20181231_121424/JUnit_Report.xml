@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="SampleAPITesting" time="17" tests="4" failures="0" errors="0">
+   <testsuite name="SampleAPITesting" tests="4" failures="0" errors="0" time="17" timestamp="2018-12-31 12:14:26" hostname="vikky - Vikkyaradhya" id="Test Suites/SampleAPITesting">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="C:\\Users\\vikky\\Katalon Studio\\API Demo Project\\Reports\\SampleAPITesting\\20181231_121424"/>
+         <property name="logFiles" value="C:\\Users\\vikky\\Katalon Studio\\API Demo Project\\Reports\\SampleAPITesting\\20181231_121424\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="vikky - Vikkyaradhya"/>
+         <property name="hostAddress" value="192.168.1.5"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="5.9.1.2"/>
+      </properties>
+      <testcase name="Test Cases/UserRestTest/UserData" classname="Test Cases/UserRestTest/UserData" status="PASSED">
+         <system-out><![CDATA[2018-12-31 12:14:26 - [TEST_CASE][PASSED] - Test Cases/UserRestTest/UserData: Test Cases/UserRestTest/UserData
+
+2018-12-31 12:14:27 - [TEST_STEP][PASSED] - restresponse = sendRequestAndVerify(findTestObject("UserRestService/ListUsers")): Send request and verify the response successfully
+
+2018-12-31 12:14:31 - [TEST_CASE][PASSED] - Start Test Case : Verification: Verification accomplished successfully
+
+2018-12-31 12:14:31 - [TEST_STEP][PASSED] - request = getInstance().getCurrentRequest(): null
+
+2018-12-31 12:14:31 - [TEST_STEP][PASSED] - response = getInstance().getCurrentResponse(): null
+
+2018-12-31 12:14:31 - [MESSAGE][PASSED] - Verify response successfully
+
+2018-12-31 12:14:31 - [MESSAGE][PASSED] - Send request and verify the response successfully
+
+2018-12-31 12:14:31 - [TEST_STEP][PASSED] - verifyResponseStatusCode(restresponse, 200): Verify response status code successfully
+
+2018-12-31 12:14:31 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2018-12-31 12:14:31 - [TEST_STEP][PASSED] - verifyElementPropertyValue(restresponse, "data[2].first_name", "Tracey"): Verify element property value successfully
+
+2018-12-31 12:14:31 - [MESSAGE][PASSED] - Verify element property value successfully
+
+2018-12-31 12:14:31 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2018-12-31 12:14:31 - [TEST_STEP][PASSED] - result = slurper.parseText(restresponse.getResponseBodyContent()): null
+
+2018-12-31 12:14:31 - [TEST_STEP][PASSED] - UserName = first_name: null
+
+2018-12-31 12:14:31 - [TEST_STEP][PASSED] - println("Username is:" + UserName): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/UserRestTest/UserPostData" classname="Test Cases/UserRestTest/UserPostData" status="PASSED">
+         <system-out><![CDATA[2018-12-31 12:14:31 - [TEST_CASE][PASSED] - Test Cases/UserRestTest/UserPostData: Test Cases/UserRestTest/UserPostData
+
+2018-12-31 12:14:32 - [TEST_STEP][PASSED] - postresponse = sendRequest(findTestObject("UserRestService/PostUserData")): Send request successfully
+
+2018-12-31 12:14:33 - [MESSAGE][INFO] - HAR: C:\Users\vikky\Katalon Studio\API Demo Project\Reports\SampleAPITesting\20181231_121424\requests\main\0.har
+
+2018-12-31 12:14:33 - [MESSAGE][PASSED] - Send request successfully
+
+2018-12-31 12:14:33 - [TEST_STEP][PASSED] - verifyElementPropertyValue(postresponse, "name", "Tracey"): Verify element property value successfully
+
+2018-12-31 12:14:33 - [MESSAGE][PASSED] - Verify element property value successfully
+
+2018-12-31 12:14:33 - [TEST_STEP][PASSED] - slurper = new groovy.json.JsonSlurper(): null
+
+2018-12-31 12:14:33 - [TEST_STEP][PASSED] - result = slurper.parseText(postresponse.getResponseBodyContent()): null
+
+2018-12-31 12:14:33 - [TEST_STEP][PASSED] - a = id: null
+
+2018-12-31 12:14:33 - [TEST_STEP][PASSED] - println("Random id value is:" + a): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/CalculatorTests/Addition" classname="Test Cases/CalculatorTests/Addition" status="PASSED">
+         <system-out><![CDATA[2018-12-31 12:14:33 - [TEST_CASE][PASSED] - Test Cases/CalculatorTests/Addition: Test Cases/CalculatorTests/Addition
+
+2018-12-31 12:14:33 - [TEST_STEP][PASSED] - soapresponse = sendRequestAndVerify(findTestObject("CalculatorSoapServices/Addition")): Send request and verify the response successfully
+
+2018-12-31 12:14:36 - [TEST_CASE][PASSED] - Start Test Case : Verification: Verification accomplished successfully
+
+2018-12-31 12:14:36 - [TEST_STEP][PASSED] - request = getInstance().getCurrentRequest(): null
+
+2018-12-31 12:14:36 - [TEST_STEP][PASSED] - response = getInstance().getCurrentResponse(): null
+
+2018-12-31 12:14:36 - [TEST_STEP][PASSED] - getResponseText()).contains("AddResult"): null
+
+2018-12-31 12:14:36 - [MESSAGE][PASSED] - Verify response successfully
+
+2018-12-31 12:14:36 - [MESSAGE][PASSED] - Send request and verify the response successfully
+
+2018-12-31 12:14:36 - [TEST_STEP][PASSED] - verifyResponseStatusCode(soapresponse, 200): Verify response status code successfully
+
+2018-12-31 12:14:36 - [MESSAGE][PASSED] - Verify response status code successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/CountrySOAPService/CountryServices" classname="Test Cases/CountrySOAPService/CountryServices" status="PASSED">
+         <system-out><![CDATA[2018-12-31 12:14:36 - [TEST_CASE][PASSED] - Test Cases/CountrySOAPService/CountryServices: Test Cases/CountrySOAPService/CountryServices
+
+2018-12-31 12:14:37 - [TEST_STEP][PASSED] - CountryList = sendRequest(findTestObject("CountrySoapServices/CountryListByNames")): Send request successfully
+
+2018-12-31 12:14:41 - [MESSAGE][INFO] - HAR: C:\Users\vikky\Katalon Studio\API Demo Project\Reports\SampleAPITesting\20181231_121424\requests\main\1.har
+
+2018-12-31 12:14:41 - [MESSAGE][PASSED] - Send request successfully
+
+2018-12-31 12:14:41 - [TEST_STEP][PASSED] - verifyElementText(CountryList, "ListOfCountryNamesByNameResponse.ListOfCountryNamesByNameResult.tCountryCodeAndName[98].sISOCode", "IN"): Verify element text successfully
+
+2018-12-31 12:14:41 - [MESSAGE][PASSED] - Verify element text successfully
+
+2018-12-31 12:14:41 - [TEST_STEP][PASSED] - xml1 = responseBodyContent: null
+
+2018-12-31 12:14:41 - [TEST_STEP][PASSED] - datavalue = XmlSlurper().parseText(xml1): null
+
+2018-12-31 12:14:41 - [TEST_STEP][PASSED] - countryCode = sISOCode.text(): null
+
+2018-12-31 12:14:41 - [TEST_STEP][PASSED] - CountryISOCode = countryCode: null
+
+2018-12-31 12:14:41 - [TEST_STEP][PASSED] - println("Country ISO code is: " + CountryISOCode): null
+
+2018-12-31 12:14:41 - [TEST_STEP][PASSED] - CountryCurrency = sendRequest(findTestObject("CountrySoapServices/CountryCurrency")): Send request successfully
+
+2018-12-31 12:14:43 - [MESSAGE][INFO] - HAR: C:\Users\vikky\Katalon Studio\API Demo Project\Reports\SampleAPITesting\20181231_121424\requests\main\2.har
+
+2018-12-31 12:14:43 - [MESSAGE][PASSED] - Send request successfully
+
+2018-12-31 12:14:43 - [TEST_STEP][PASSED] - verifyElementText(CountryCurrency, "CountryCurrencyResponse.CountryCurrencyResult.sISOCode", "INR"): Verify element text successfully
+
+2018-12-31 12:14:43 - [MESSAGE][PASSED] - Verify element text successfully
+
+2018-12-31 12:14:43 - [TEST_STEP][PASSED] - verifyElementText(CountryCurrency, "CountryCurrencyResponse.CountryCurrencyResult.sName", "Rupees"): Verify element text successfully
+
+2018-12-31 12:14:43 - [MESSAGE][PASSED] - Verify element text successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2018-12-31 12:14:26 - [TEST_SUITE][PASSED] - SampleAPITesting: Test Cases/CountrySOAPService/CountryServices]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

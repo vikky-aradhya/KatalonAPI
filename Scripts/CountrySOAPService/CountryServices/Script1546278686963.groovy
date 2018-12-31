@@ -13,16 +13,24 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import internal.GlobalVariable as GlobalVariable
 
-restresponse = WS.sendRequestAndVerify(findTestObject('UserRestService/ListUsers'))
+CountryList = WS.sendRequest(findTestObject('CountrySoapServices/CountryListByNames'))
 
-WS.verifyResponseStatusCode(restresponse, 200)
+WS.verifyElementText(CountryList, 'ListOfCountryNamesByNameResponse.ListOfCountryNamesByNameResult.tCountryCodeAndName[98].sISOCode', 
+    'IN')
 
-WS.verifyElementPropertyValue(restresponse, 'data[2].first_name', 'Tracey')
+String xml1 = CountryList.responseBodyContent
 
-def slurper = new groovy.json.JsonSlurper()
-def result = slurper.parseText(restresponse.getResponseBodyContent())
+def datavalue = new XmlSlurper().parseText(xml1)
 
-GlobalVariable.UserName = result.data[2].first_name
+def countryCode = datavalue.ListOfCountryNamesByNameResult.tCountryCodeAndName[98].sISOCode.text()
 
-println("Username is:"+GlobalVariable.UserName)
+GlobalVariable.CountryISOCode = countryCode
+
+println('Country ISO code is: ' + GlobalVariable.CountryISOCode)
+
+CountryCurrency = WS.sendRequest(findTestObject('CountrySoapServices/CountryCurrency'))
+
+WS.verifyElementText(CountryCurrency, 'CountryCurrencyResponse.CountryCurrencyResult.sISOCode', 'INR')
+
+WS.verifyElementText(CountryCurrency, 'CountryCurrencyResponse.CountryCurrencyResult.sName', 'Rupees')
 

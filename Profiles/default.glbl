@@ -14,4 +14,9 @@
       <initValue>''</initValue>
       <name>a</name>
    </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>CountryISOCode</name>
+   </GlobalVariableEntity>
 </GlobalVariableEntities>

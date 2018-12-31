@@ -22,4 +22,4 @@ def result = slurper.parseText(postresponse.getResponseBodyContent())
 
 GlobalVariable.a = result.id
 
-println(GlobalVariable.a)
+println("Random id value is:"+GlobalVariable.a)
